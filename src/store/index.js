@@ -11,13 +11,13 @@ export default new Vuex.Store({
 	 * State related to App
 	 * @type {Object}
 	 */
-	state: {
-		tasks: [
-			'Clean up desk',
-			'Buy groceries',
-			'Cook dinner'
-		]
-	},
+  state: {
+    tasks: [
+      'Clean up desk',
+      'Buy groceries',
+      'Cook dinner'
+    ]
+  },
 	/**
 	 * Actions related to App
 	 * @type {Object}
@@ -78,9 +78,7 @@ export default new Vuex.Store({
 
 				return
 			}
-			
 			state.tasks.unshift(payload)
 		}
 	}
-	
 })
