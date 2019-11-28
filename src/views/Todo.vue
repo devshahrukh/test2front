@@ -5,10 +5,10 @@
 				<div class="container">
 					<div class="field">
 						<div :class="[ { 'is-loading': isSaving }, 'control is-medium']">
-							<input 
+							<input
 								type="text"
 								v-model="task"
-								class="input is-medium" 
+								class="input is-medium"
 								placeholder="Enter a new task..."
 								@keyup.enter="handleKeydown"
 							>
@@ -57,14 +57,13 @@ export default {
 		 * Handle the entered text in the input field
 		 * @return void
 		 */
-		handleKeydown() {			
+		handleKeydown() {
 			this.isSaving = true
 			this.addNewTask({
 				task: this.task
 			})
 			.then(() => {
 				this.isSaving = false
-
 			})
 			this.task = ''
 		}
